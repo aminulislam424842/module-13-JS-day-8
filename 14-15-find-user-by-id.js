@@ -1,8 +1,11 @@
-function sumToN(n) {
-  if (n === 0) {
-    return 0;
+function findUserById(users, id) {
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].id === id ) { // find the bug
+      return users[i];
+    }
   }
-  return n + sumToN(n-1); 
+  return null;
 }
 
-console.log(sumToN(5)); 
+let users = [{ id: 1, name: "Sam" }, { id: 2, name: "Rafi" }];
+console.log(findUserById(users, 2)); // Expected: { id: 2, name: "Rafi" }
