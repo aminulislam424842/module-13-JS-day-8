@@ -1,14 +1,17 @@
-function bubbleSort(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr.length - 1; j++) {
-      if (arr[j] > arr[j + 1]) {
-        let temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
-      }
+function multiplicationGrid(n) {
+  let grid = [];
+
+  for (let i = 1; i <= n; i++) {
+
+    let row = [];
+
+    for (let j = 1; j <= n; j++) {
+      row.push(i * j);
     }
-  }
-  return arr;
+    grid.push(row);
+  } 
+
+  return grid;
 }
 
-console.log(bubbleSort([5, 3, 8, 1])); 
+console.log(multiplicationGrid(3));
