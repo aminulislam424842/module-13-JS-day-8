@@ -1,10 +1,8 @@
-function countOccurrences(arr) {
-  let counts = {};
-
-  for (let i = 0; i < arr.length; i++) {
-    counts[arr[i]] = (counts[arr[i]] || 0) + 1;
+function sumToN(n) {
+  if (n === 0) {
+    return 0;
   }
-  return counts;
+  return n + sumToN(n - 1);
 }
 
-console.log(countOccurrences(["a", "b", "a", "c", "b", "a"]));
+console.log(sumToN(5)); 
